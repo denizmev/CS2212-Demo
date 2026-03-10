@@ -1,0 +1,23 @@
+<h2>About this website</h2>
+<p>This is a website with pages in it.</p>
+<p>This website was created by {{name}}</p>
+{% comment %} This is a comment {% endcomment %}
+
+{% if a_list %}
+<p>Length: {{a_list|length}}</p>
+{% for i in a_list %}
+<p>{{i}}</p>
+{% endfor %}
+{% else %}
+<p> Could not get list.</p>
+{% endif %}
+
+{% if players|length > 1 %}
+{% for i in players %}
+<p>{{i}}</p>
+{% endfor %}
+{% else %}
+<p>
+    There is one player.
+</p>
+{% endif %}
